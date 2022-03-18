@@ -19,11 +19,13 @@ int triangle(double,double,double,double*,double*);
 
 
 int main(void){
-    double per, area;
-    if (rectangle(5, 6.1, &per, &area) == -1){
-        printf("Invalid sides\n");
-    } else {
-        printf("P = %.2lf, S = %.2lf\n", per, area);
+    double w, h, per, area;
+    while (scanf("%lf %lf", &w, &h) != EOF){
+        if (rectangle(w, h, &per, &area) == -1){
+            fprintf(stderr, "Invalid sides\n");
+        } else {
+            printf("P = %.2lf, S = %.2lf\n", per, area);
+        }
     }
 /*
     //printHello();
