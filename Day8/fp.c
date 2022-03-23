@@ -68,12 +68,21 @@ int main(){
     for (int i = 0; i < COUNT; i++){
         arr[i] = rand() % 100;  // 0-99
     }
+
+
    // qsort(arr, COUNT, sizeof(int), compare);
     bubbleSort(arr, COUNT, sizeof(int), compare);
     for (int i = 0; i < COUNT; i++){
         printf("%d ", arr[i]);
     }
     putchar('\n');
+
+    void (*sortF[2])(void*,size_t,size_t,int(*)(const void*, const void*));
+    sortF[0] = bubbleSort;
+    sortF[1] = qsort;
+
+    sortF[1](arr, COUNT, sizeof(int), compare);
+
 
     return 0;
 }
