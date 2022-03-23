@@ -41,6 +41,16 @@ void bubbleSort(void* arr, size_t n, size_t size, int (*comp)(const void*,const 
    }
 }
 
+
+int *lsearch(const int key, int* arr, size_t n){
+    for (int i = 0; i < n; i++){
+        if (arr[i] == key){
+            return arr + i;
+        }
+    }
+    return NULL;
+}
+
 int compInt(int a, int b){
     return b - a;
 }
