@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+
 size_t mystrlen(const char* str){
     size_t cnt = -1;
     while (*(str + ++cnt));  // str[++cnt]
