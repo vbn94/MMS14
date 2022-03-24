@@ -6,13 +6,8 @@
 #define OPT_U 1
 #define OPT_A 2
 
-void setBit(uint8_t* mask, size_t bit){
-    *mask |= (1 << bit);
-}
-
-int checkBit(uint8_t mask, size_t bit){
-    return !!(mask & (1 << bit));
-}
+void setBit(uint8_t*,size_t);
+int checkBit(uint8_t,size_t);
 
 int main(int argc, char *argv[]){
     int opt;
@@ -39,4 +34,12 @@ int main(int argc, char *argv[]){
         printf("Age: %d\n", age);
     }
     return 0;
+}
+
+void setBit(uint8_t* mask, size_t bit){
+    *mask |= (1 << bit);
+}
+
+int checkBit(uint8_t mask, size_t bit){
+    return !!(mask & (1 << bit));
 }
