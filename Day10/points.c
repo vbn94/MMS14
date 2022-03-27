@@ -41,6 +41,13 @@ int main(){
     for (int i = 0; i < COUNT; i++){
         printf("%s (%.1lf, %.1lf)\n", points[i].name, points[i].x, points[i].y);
     }
+
+    /*for (int i = 0; i < COUNT; i++){
+        for (int j = 0; j < COUNT; j++){
+            [i], [j]
+        }
+    }*/
+
     return 0;
 }
 
