@@ -1,0 +1,18 @@
+Hello
+12345
+MMS C Camp
+a.out
+books.data
+dirs.c
+dup2.c
+dup.c
+fileconvert
+fileconvert.c
+file.txt
+io.c
+nums.data
+nums.txt
+readFile.c
+strtolist.c
+terminal.c
+writeFile.c
