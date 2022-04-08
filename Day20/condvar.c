@@ -5,13 +5,10 @@
 #include <time.h>
 #include <semaphore.h>
 
-#define COUNT 10
-#define BUFFER 10
+#define COUNT 4
 
 int fuel = 0;
 
-sem_t freePos;
-sem_t busyPos;
 pthread_mutex_t mux;
 pthread_cond_t fuelCond;
 
@@ -21,7 +18,8 @@ void* fill(void* args){
         pthread_mutex_lock(&mux);
         fuel++;
         pthread_mutex_unlock(&mux);
-        pthread_cond_broadcast(&fuelCond);
+        //pthread_cond_signal(&fuelCond);
+        pthread_cond_broadcast(&fuelCond); 
     }
 }
 
@@ -43,7 +41,7 @@ int main(){
     pthread_mutex_init(&mux, NULL);
     pthread_t th[COUNT];
     for (int i = 0; i < COUNT; i++){
-        if (i != 0){
+        if (i % 2 == 0){
             if (pthread_create(th + i, NULL, fill, NULL) != 0){
                 perror("create");
                 return EXIT_FAILURE;

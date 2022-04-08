@@ -7,7 +7,7 @@
 
 sem_t printerSem;
 
-#define COUNT 10
+#define COUNT 2
 
 void* printer(void* arg){
     printf("%d Waiting for printer...\n", *(int*)arg);
@@ -25,8 +25,7 @@ int main(){
     sem_init(&printerSem, 0, 2);
     pthread_t th[COUNT];
     for (int i = 0; i < COUNT; i++){
-        int* num = malloc(sizeof(int));
-        *num = i;
+
         if(pthread_create(th + i, NULL, printer, num)){
             perror("create error");
             return EXIT_FAILURE;
