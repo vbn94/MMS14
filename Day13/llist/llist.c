@@ -54,6 +54,7 @@ void insertNth(node_t** list, int data, size_t n){
     }
     node_t* current = *list;
     node_t* prev = current;
+    // n steps
     while (current != NULL && n--){
         prev = current;
         current = current->next;
@@ -135,10 +136,11 @@ node_t* copyList(node_t* list){
 void appendList(node_t** listA, node_t** listB){
     node_t* tailA = *listA;
     if (tailA){
-        while (tailA->next) 
+        while (tailA->next != NULL) 
             tailA = tailA->next;
     }
-    tailA->next = copyList(*listB);
+    tailA->next = *listB;
+    //tailA->next = copyList(*listB);
     listFree(listB);
 }
 

@@ -1,6 +1,12 @@
 #include <stdio.h>
 #define TINT 1
 #define TDOUBLE 2
+#define DEBUG
+#ifdef DEBUG
+    #define LOG(x) printf("%d\n", x)
+#else
+    #define LOG(x)
+#endif
 
 void printMax(const void* num1, const void* num2, int type){
     if (type == 1){
@@ -16,13 +22,9 @@ void printMax(const void* num1, const void* num2, int type){
 
 
 int main(){
-    double pi = 3.14;
-    int num = 20;
-    void* ptr; // universal pointer
-    ptr = &num;
-    printf("Num = %d\n",  *((int*)ptr));
-    ptr = &pi;
-    printf("Pi = %lf\n",  *((double*)ptr));
+    int num = 20, num2 = 30;
+    LOG(num);
+    LOG(num2);
     return 0;
 
 }

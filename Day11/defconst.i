@@ -1,10 +1,10 @@
-# 1 "condcomp.c"
+# 1 "defconst.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "condcomp.c"
+# 1 "defconst.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,23 +722,13 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "condcomp.c" 2
+# 2 "defconst.c" 2
 
 
-
-
-# 5 "condcomp.c"
+# 3 "defconst.c"
 int main(){
-
-
-            printf("Linux\n");
-# 23 "condcomp.c"
-            printf("Windows\n");
-
-
-
-
-
-
-    return 0;
+    printf("%s\n", "defconst.c");
+    printf("%s\n", "15:36:23");
+    printf("%s\n", "Mon Mar 28 15:34:48 2022");
+    printf("Line number: %d\n", __LINE__);
 }

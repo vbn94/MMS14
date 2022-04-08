@@ -1,10 +1,10 @@
-# 1 "condcomp.c"
+# 1 "strop.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "condcomp.c"
+# 1 "strop.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,23 +722,18 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "condcomp.c" 2
+# 2 "strop.c" 2
+# 10 "strop.c"
 
-
-
-
-# 5 "condcomp.c"
+# 10 "strop.c"
 int main(){
+    int a = 20, number = 600;
+    printf("%s = %d\n", "a", a);
+    printf("%s = %d\n", "number", number);
+    printf("Zevs" " and " "Kleopatra" ": We love you!\n");
+    int num1 = 30, num2 = 25, num3 = 1050;
 
-
-            printf("Linux\n");
-# 23 "condcomp.c"
-            printf("Windows\n");
-
-
-
-
-
-
+    printf("%d\n", num1);
+    printf("%d\n", num3);
     return 0;
 }

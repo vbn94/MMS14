@@ -1,10 +1,10 @@
-# 1 "condcomp.c"
+# 1 "main.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "condcomp.c"
+# 1 "main.c"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,23 +722,24 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "condcomp.c" 2
+# 2 "main.c" 2
+
+# 1 "mymath.h" 1
 
 
 
 
-# 5 "condcomp.c"
+# 4 "mymath.h"
+int sum(int,int);
+int sub(int,int);
+int mult(int,int);
+# 4 "main.c" 2
+
+
 int main(){
-
-
-            printf("Linux\n");
-# 23 "condcomp.c"
-            printf("Windows\n");
-
-
-
-
-
-
+    int a, b;
+    scanf("%d %d", &a, &b);
+    int result = sum(a, b);
+    printf("Result = %d\n", result);
     return 0;
 }
